@@ -1,35 +1,15 @@
-let posX;
-let posY;
-let diam;
-let rad;
-
-let velX;   
-let velY;
+const NP = 100;
+let pelotas = [];
 
 function setup() {
     createCanvas(windowWidth, windowHeight);
-    diam = random(50, 300);
-    rad = diam /2;
-
-    posX = random(rad, width - rad);
-    posY = random(rad, height - rad);
-
-    velX = random(-5, 5);   
-    velY = random(-5, 5);
+    rectMode(CENTER);
+    for(let i = 0; i < 100; i++){
+    console.log('El indice es: ' + i);
+    }
 }
 
 function draw() {
     background(150);
-    if(posX > width - rad || posX < rad){  
-        velX *= -1;  
-    }
-    
-    if(posY > height - rad || posY < rad){    
-        velY *= -1;
-    }               
-    
-    posX += velX;
-    posY += velY;
 
-    circle(posX, posY, diam); 
 }

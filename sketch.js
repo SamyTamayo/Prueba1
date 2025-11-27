@@ -7,8 +7,9 @@ function setup() {
     colorMode(HSB, 360, 225, 225);
     noStroke();
 
-    for(let i = 0; i < NP; i++){
-        pelotas.push(new Pelota);
+    for(let i = 0; i < NP; i++){ 
+        let nuevaPelota = new Pelota(); 
+        pelotas[i] = nuevaPelota;
     }
 
 }
@@ -16,8 +17,8 @@ function setup() {
 function draw() {
     background(0);
 
-     for (let i = 0; i < pelotas.length; i++) {
-        pelotas[i].actualizar();
+        for(let i = 0; i < NP; i++){       
+        pelotas[i].actualizar(); 
         pelotas[i].visualizar();
     }
 
